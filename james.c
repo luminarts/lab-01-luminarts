@@ -1,11 +1,9 @@
 #include <stdio.h>
 
-void saladCounter(int lista[]) {
-    int fivecounter, sevencounter, tencounter, maxcounter, highest;
+void saladCounter(int lista[], int listlength) {
+    int fivecounter = 0, sevencounter = 0, tencounter = 0, maxcounter = 0, highest = 0;
 
-    fivecounter = sevencounter = tencounter = maxcounter = 0;
-
-    for(int i = 0; i < 10000; i++) {
+    for(int i = 0; i < listlength; i++) {
         if (lista[i] == 5) {
             sevencounter = 0;
             tencounter = 0;
@@ -83,6 +81,6 @@ int main() {
 
     
     printf("James vendeu %d saladas de 5 reais, %d de 7 reais e %d de 10 reais\n", five, seven, ten);
-    saladCounter(sellArray);
+    saladCounter(sellArray, num);
 
 }

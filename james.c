@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * @brief O método void saladCounter é responsável por realizar a conta de qual salada foi mais vendida consecutivamente
+ * 
+ * @param lista O parâmetro lista recebe um array das respectivas vendas de saladas
+ * @param listlength O parâmetro listlength recebe um inteiro que representa o número de vendas feitas
+ */
 void saladCounter(int lista[], int listlength) {
     int fivecounter = 0, sevencounter = 0, tencounter = 0, maxcounter = 0, highest = 0;
 
@@ -37,6 +43,13 @@ void saladCounter(int lista[], int listlength) {
     printf("James vendeu %d saladas de %d reais consecutivamente\n", maxcounter, highest);    
 }
 
+/**
+ * @brief A função fiveQuantities é responsável por calcular quantas vendas de salada de 5 reais foram feitas
+ * 
+ * @param lista O parâmetro lista recebe um array das respectivas vendas de saladas
+ * @param listlength O parâmetro listlength recebe um inteiro que representa o número de vendas feitas
+ * @return int A função retorna um inteiro que representa o número de vendas de saladas de 5 reais feitas
+ */
 int fiveQuantities(int lista[], int listlength) {
     int five = 0;
     for(int i = 0; i < listlength; i++) {
@@ -47,6 +60,13 @@ int fiveQuantities(int lista[], int listlength) {
     return five;
 }
 
+/**
+ * @brief A função sevenQuantities é responsável por calcular quantas vendas de salada de 7 reais foram feitas
+ * 
+ * @param lista O parâmetro lista recebe um array das respectivas vendas de saladas
+ * @param listlength O parâmetro listlength recebe um inteiro que representa o número de vendas feitas
+ * @return int A função retorna um inteiro que representa o número de vendas de saladas de 7 reais feitas
+ */
 int sevenQuantities(int lista[], int listlength) {
     int seven = 0;
     for(int i = 0; i < listlength; i++) {
@@ -57,6 +77,13 @@ int sevenQuantities(int lista[], int listlength) {
     return seven;
 }
 
+/**
+ * @brief A função tenQuantities é responsável por calcular quantas vendas de salada de 10 reais foram feitas
+ * 
+ * @param lista O parâmetro lista recebe um array das respectivas vendas de saladas
+ * @param listlength O parâmetro listlength recebe um inteiro que representa o número de vendas feitas
+ * @return int A função retorna um inteiro que representa o número de vendas de saladas de 10 reais feitas
+ */
 int tenQuantities(int lista[], int listlength) {
     int ten = 0;
     for(int i = 0; i < listlength; i++) {
@@ -66,6 +93,12 @@ int tenQuantities(int lista[], int listlength) {
     } 
     return ten;
 }
+
+/**
+ * @brief A função main é responsável por receber a entrada do código e aplicar as funções e métodos criados
+ * 
+ * @return int A função retorna 0, indicando que o programa rodou sem problemas
+ */
 
 int main() {
     int num, sellArray[10000];
@@ -83,4 +116,5 @@ int main() {
     printf("James vendeu %d saladas de 5 reais, %d de 7 reais e %d de 10 reais\n", five, seven, ten);
     saladCounter(sellArray, num);
 
+    return 0;
 }
